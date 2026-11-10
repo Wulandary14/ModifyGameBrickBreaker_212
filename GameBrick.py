@@ -184,6 +184,10 @@ def populateBlocks(blockWidth, blockHeight,
 
     return listOfBlocks
 
+def drawHearts(lives):
+    for i in range(lives):
+        heart = font.render("♥", True, (255, 105, 180))
+        screen.blit(heart, (85 + i * 25, HEIGHT - 20))
 
 # Once all the lives are over, this function waits until
 # exit or space bar is pressed and does the corresponding action
@@ -210,10 +214,6 @@ def main():
     scoreTextRect = scoreText.get_rect()
     scoreTextRect.center = (20, HEIGHT-10)
 
-    livesText = font.render("Lives", True, WHITE)
-    livesTextRect = livesText.get_rect()
-    livesTextRect.center = (120, HEIGHT-10)
-
     striker = Striker(0, HEIGHT-50, 100, 20, 10, WHITE)
     strikerXFac = 0
 
@@ -229,7 +229,7 @@ def main():
     while running:
         screen.fill(BLACK)
         screen.blit(scoreText, scoreTextRect)
-        screen.blit(livesText, livesTextRect)
+        drawHearts(lives)
 
         scoreText = font.render("Score : " + str(score), True, WHITE)
         livesText = font.render("Lives : " + str(lives), True, WHITE)
