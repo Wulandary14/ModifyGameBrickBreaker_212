@@ -217,7 +217,7 @@ def main():
     striker = Striker(0, HEIGHT-50, 100, 20, 10, DUSTY_BERRY)
     strikerXFac = 0
 
-    ball = Ball(0, HEIGHT-150, 7, 5, WHITE)
+    ball = Ball(0, HEIGHT-150, 10, 5, WHITE)
 
     blockWidth, blockHeight = 40, 15
     horizontalGap, verticalGap = 20, 20
