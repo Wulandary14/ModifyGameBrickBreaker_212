@@ -214,7 +214,7 @@ def main():
     scoreTextRect = scoreText.get_rect()
     scoreTextRect.center = (20, HEIGHT-10)
 
-    striker = Striker(0, HEIGHT-50, 100, 20, 10, WHITE)
+    striker = Striker(0, HEIGHT-50, 100, 20, 10, DUSTY_BERRY)
     strikerXFac = 0
 
     ball = Ball(0, HEIGHT-150, 7, 5, WHITE)
