@@ -9,7 +9,7 @@ WIDTH, HEIGHT = 600, 500
 # Colors
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-GREEN = (0, 255, 0)
+PINK = (255, 182, 193)
 RED = (255, 0, 0)
 
 font = pygame.font.Font('freesansbold.ttf', 15)
@@ -179,7 +179,7 @@ def populateBlocks(blockWidth, blockHeight,
         for j in range(0, HEIGHT//2, blockHeight+verticalGap):
             listOfBlocks.append(
                 Block(i, j, blockWidth, blockHeight, 
-                      random.choice([WHITE, GREEN])))
+                      random.choice([WHITE, PINK])))
 
     return listOfBlocks
 
